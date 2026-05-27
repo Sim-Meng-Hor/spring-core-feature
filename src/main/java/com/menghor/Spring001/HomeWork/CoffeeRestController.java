@@ -20,7 +20,7 @@ public class CoffeeRestController {
     @GetMapping("/coffees")
     public Map<String, Object> getCoffees(){
         Map<String, Object> coffee = new HashMap<>();
-        coffee.put("coffees", coffeeRepository.getCoffees());
+        coffee.put("coffees", coffeeRepository.getAllCoffees());
         coffee.put("message", "success");
         return coffee;
     }

@@ -14,7 +14,7 @@ public class CoffeeRepository {
        add(new Coffee("004","Americano", 4000.0, false));
        add(new Coffee("005","Latte", 6000.0, true));
     }};
-    public ArrayList<Coffee> getCoffees() {
+    public ArrayList<Coffee> getAllCoffees() {
         return coffees;
     }
 }
