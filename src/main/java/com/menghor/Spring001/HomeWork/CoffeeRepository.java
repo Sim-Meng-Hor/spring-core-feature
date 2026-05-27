@@ -1,20 +1,36 @@
 package com.menghor.Spring001.HomeWork;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
 @Repository
+@Configuration
 public class CoffeeRepository {
-    private final static ArrayList<Coffee> coffees = new ArrayList<>()
-    {{
-       add(new Coffee("001","Ice Latte", 7500.0, true));
-       add(new Coffee("002","Cappuccino", 5000.0, true));
-       add(new Coffee("003","Espresso", 3000.0, true));
-       add(new Coffee("004","Americano", 4000.0, false));
-       add(new Coffee("005","Latte", 6000.0, true));
-    }};
+    private final static ArrayList<Coffee> coffees = new ArrayList<>();
+    @Bean
+    public Coffee espresso() {
+        return new Coffee("C001", "Espresso", 2.50, true);
+    }
+
+    @Bean
+    public Coffee latte() {
+        return new Coffee("C002", "Latte", 3.50, true);
+    }
+
+    @Bean
+    public Coffee cappuccino() {
+        return new Coffee("C003", "Cappuccino", 4.00, false);
+    }
+
+
     public ArrayList<Coffee> getAllCoffees() {
+        ArrayList<Coffee> coffees = new ArrayList<>();
+        coffees.add(espresso());
+        coffees.add(latte());
+        coffees.add(cappuccino());
         return coffees;
     }
 }
