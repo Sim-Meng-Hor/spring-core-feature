@@ -11,7 +11,7 @@ import java.util.Map;
 import static org.apache.tomcat.util.net.openssl.OpenSSLStatus.getName;
 
 @RestController
-@RequestMapping("/api/v1/student")
+@RequestMapping("/api/v1")
 public class StudentRestController {
 
     private final StudentRepository studentRepository;
@@ -20,7 +20,7 @@ public class StudentRestController {
     }
 
 
-    @GetMapping("")
+    @GetMapping("/student")
     public Map<String, Object> getStudents() {
         Map<String, Object> map = new HashMap<>();
         map.put("students", studentRepository.getStudents());

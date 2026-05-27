@@ -13,6 +13,9 @@ public class StudentRepository {
     add(new Student(1001, "Menghor", "Male"));
     add(new Student(1002, "Jane", "Female"));
     add(new Student(1003, "Jack", "Male"));
+    add(new Student(1004, "Tom", "Male"));
+    add(new Student(1005, "Jerry", "Male"));
+    add(new Student(1006, "Rose", "Female"));
     }};
 
     // return all the student for rest controller
